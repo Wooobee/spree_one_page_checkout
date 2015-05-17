@@ -1,14 +1,14 @@
 <div class="row steps-data">
 
   <% if order.has_step?("address") %>
-    <div class="columns alpha four">
+    <div class="columns alpha five">
       <h6><%= t(:shipping_address) %> <%= link_to "(#{t(:edit)})", cart_path unless @order.completed? %></h6>
       <div class="address">
         <%= order.ship_address %>
       </div>
     </div>
 
-    <div class="columns alpha four">
+    <div class="columns alpha five">
       <h6><%= t(:billing_address) %> <%= link_to "(#{t(:edit)})", cart_path unless @order.completed? %></h6>
       <div class="address">
         <%= order.bill_address %>
