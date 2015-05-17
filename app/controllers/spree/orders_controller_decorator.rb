@@ -1,7 +1,7 @@
 Spree::OrdersController.class_eval do
 
   def edit
-    @order = current_order(true)
+    @order = current_order
     associate_user
     @order.bill_address ||= Spree::Address.default
     @order.ship_address ||= Spree::Address.default
